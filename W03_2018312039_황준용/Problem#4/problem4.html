@@ -17,6 +17,10 @@
       display: table-cell;
       vertical-align: middle;
     }
+    fieldset {
+      width: 850px;
+      line-height: 1.8;
+    }
   </style>
 
   <head>
@@ -60,9 +64,10 @@
         <input type="text" name="ars" value="4444" />
         <input type="submit" value="Request ARS" /><br />
         <b>Card Number : </b>
-        <input type="text" name="one" /> - <input type="text" name="two" /> -
-        <input type="text" name="three" /> -
-        <input type="text" name="four" /><br />
+        <input size="4" type="text" name="one" /> -
+        <input size="4" type="text" name="two" /> -
+        <input size="4" type="text" name="three" /> -
+        <input size="4" type="text" name="four" /><br />
         <b>email : </b>
         <input type="text" name="email" /> <b>@</b>
         <select name="card">
@@ -73,9 +78,9 @@
           <option value="yahoo.com">yahoo.com</option> </select
         ><br />
         <b>CVC : </b>
-        <input type="text" name="cvc" /> <br />
+        <input size="4" type="text" name="cvc" /> <br />
         <b>Card Password : </b>
-        <input type="text" name="card password" />
+        <input size="4" type="text" name="card password" />
       </fieldset>
     </form>
 
@@ -122,7 +127,7 @@
         type="button"
         onclick="alert('All contents will be used for delivery only!')"
       >
-        Click the button!
+        Alert
       </button>
       <br />
       <fieldset>
@@ -139,6 +144,7 @@
       <fieldset>
         <legend><b>Events</b></legend>
         Choose the city you want to go. Multiple options are possible. <br />
+        <br />
         <input type="checkbox" name="New York" value="New York" /> New York
         <input type="checkbox" name="Hongkong" value="Hongkong" /> Hongkong
         <input type="checkbox" name="Paris" value="Paris" />Paris
