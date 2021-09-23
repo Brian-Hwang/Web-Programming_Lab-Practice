@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week3: problem 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      /* Components to set items on the center of the screen */
+      html,
+      body {
+        height: 100%;
+      }
+
+      html {
+        display: table;
+        margin: auto;
+      }
+
+      body {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <picture>
+      <source srcset="path.jpg" media="(min-width:650px)" />
+      <source srcset="dog.jpg" media="(min-width:550px)" />
+      <source srcset="mountain.jpg" media="(min-width:450px)" />
+      <img src="cat.jpg" alt="Dragons" />
+    </picture>
+  </body>
+</html>

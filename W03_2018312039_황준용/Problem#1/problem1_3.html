@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    /* Components to set items on the center of the screen */
+    html,
+    body {
+      height: 100%;
+    }
+
+    html {
+      display: table;
+      margin: auto;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
+
+  <head>
+    <title>Week3: problem1_1</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend><h1>Survey</h1></legend>
+        What is your name? <br />
+        <input type="text" name="name" placeholder="Enter your name" /><br />
+        What is your favorite color? <br />
+        <input type="color" name="favcolor" value="#ffaa00" /><br />
+        When is your birthday? <br />
+        <input type="datetime-local" name="d-day" /><br />
+        What would you like to recieve as a gift? <br />
+        <select name="gift_preference">
+          <option value="Coupon">Coupon</option>
+          <option value="Meat">Meat</option>
+          <option value="Ice Coffee">Ice Coffee</option>
+          <option value="Money" selected>Money</option>
+          <option value="Notebook">Notebook</option>
+          <option value="House">House</option> </select
+        ><br />
+      </fieldset>
+    </form>
+  </body>
+</html>

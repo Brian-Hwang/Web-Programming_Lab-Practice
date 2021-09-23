@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week3: problem 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Components to set items on the center of the screen */
+      html {
+        display: table;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      body {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      /* Components to set items on the center of the screen */
+      /* Components to set borders on the table */
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+      table {
+        border-spacing: 3px;
+      }
+      /* Components to set borders on the table */
+    </style>
+  </head>
+  <body>
+    <table width="880px">
+      <!-- table header -->
+      <caption style="font-size: 2.3em; width: 100%; height: 80px;">
+        <b>My Top 5 Videos in YouTube</b>
+      </caption>
+      <!-- table component 1 -->
+      <tr>
+        <td rowspan="3" style="background-color:green">
+          <b>Top 1</b>
+        </td>
+        <td style="background-color:red"><b>Title</b></td>
+        <td colspan="4" style="border-color:red">
+          <b>[후토크] 티아고 실바 그냥 월클, 실바 앞에 멈춰진 손흥민</b>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:yellow">
+          <b>Youtube</b>
+        </td>
+        <td colspan="4" style="border-color:yellow">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/TFml5Ld63qc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:blue"><b>URL</b></td>
+        <td colspan="4" style="border-color:blue">
+          <a
+            href="https://www.youtube.com/watch?v=TFml5Ld63qc&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV"
+          >
+            <b>
+              https://www.youtube.com/watch?v=TFml5Ld63qc&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV
+            </b>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="3" style="background-color:green">
+          <b>Top 2</b>
+        </td>
+        <td style="background-color:red"><b>Title</b></td>
+        <td style="border-color:red">
+          <b>[주간킹갓] 실바 베테랑의 품격 + 하프타임 투헬의 용병술</b>
+        </td>
+        <td rowspan="3" style="background-color:green">
+          <b>Top 3</b>
+        </td>
+        <td style="background-color:red"><b>Title</b></td>
+        <td style="border-color:red">
+          <b>[후리뷰] 앞뒤로 사기캐 루카쿠&멘디, 사울은 느낌 쎄~한데?</b>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:yellow">
+          <b>Youtube</b>
+        </td>
+        <td style="border-color:yellow">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/mDWi4mJiKK0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </td>
+        <td style="background-color:yellow">
+          <b>Youtube</b>
+        </td>
+        <td style="border-color:yellow">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/mTcJFyChz6I"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:blue"><b>URL</b></td>
+        <td style="border-color:blue">
+          <a
+            href="https://www.youtube.com/watch?v=mDWi4mJiKK0&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV"
+          >
+            <b>
+              https://www.youtube.com/watch?v=mDWi4mJiKK0&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV
+            </b>
+          </a>
+        </td>
+        <td style="background-color:blue"><b>URL</b></td>
+        <td style="border-color:blue">
+          <a
+            href="https://www.youtube.com/watch?v=mTcJFyChz6I&t=550s&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV"
+          >
+            <b>
+              https://www.youtube.com/watch?v=mTcJFyChz6I&t=550s&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV
+            </b>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="3" style="background-color:green">
+          <b>Top 4</b>
+        </td>
+        <td style="background-color:red"><b>Title</b></td>
+        <td style="border-color:red">
+          <b>[주간킹갓] 첼시가 얻은 루카쿠 효과 5가지</b>
+        </td>
+        <td rowspan="3" style="background-color:green">
+          <b>Top 5</b>
+        </td>
+        <td style="background-color:red"><b>Title</b></td>
+        <td style="border-color:red">
+          <b>[후토크] 충격적인 찰로바 PL 데뷔전, 루카쿠 없이 첼시 이정도?!</b>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:yellow">
+          <b>Youtube</b>
+        </td>
+        <td style="border-color:yellow">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/YXlRINrbYH8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </td>
+        <td style="background-color:yellow">
+          <b>Youtube</b>
+        </td>
+        <td style="border-color:yellow">
+          <iframe
+            width="300"
+            height="200"
+            src="https://www.youtube.com/embed/btdnY_g-3wI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:blue"><b>URL</b></td>
+        <td style="border-color:blue">
+          <a
+            href="https://www.youtube.com/watch?v=YXlRINrbYH8&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV"
+          >
+            <b>
+              https://www.youtube.com/watch?v=YXlRINrbYH8&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV
+            </b>
+          </a>
+        </td>
+        <td style="background-color:blue"><b>URL</b></td>
+        <td style="border-color:blue">
+          <a
+            href="https://www.youtube.com/watch?v=btdnY_g-3wI&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV"
+          >
+            <b>
+              https://www.youtube.com/watch?v=btdnY_g-3wI&ab_channel=%EC%9D%B4%EC%8A%A4%ED%83%80TV
+            </b>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

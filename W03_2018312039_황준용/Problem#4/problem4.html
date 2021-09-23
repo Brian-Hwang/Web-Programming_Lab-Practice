@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    /* Components to set items on the center of the screen */
+    html {
+      height: 100%;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    html {
+      display: table;
+      margin: auto;
+    }
+
+    body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  </style>
+
+  <head>
+    <title>Week3: problem1_1</title>
+  </head>
+  <body>
+    <h1>Payment</h1>
+    <form>
+      <fieldset>
+        <legend><h3>Sales products</h3></legend>
+        <input type="checkbox" name="Cucumber" value="Cucmber" /> Cucmber
+        <input type="checkbox" name="Potato" value="Potato" /> Potato
+        <input type="checkbox" name="Tomato" value="Tomato" />Tomato<br />
+
+        <input type="checkbox" name="Watermelon" value="Watermelon" />Watermelon
+        <input type="checkbox" name="Crab" value="Crab" /> Crab
+        <input type="checkbox" name="Oyster" value="Oyster" /> Oyster<br />
+
+        <input type="checkbox" name="Octopus" value="Octopus" /> Octopus
+        <input type="checkbox" name="Shrimp" value="Shrimp" /> Shrimp
+        <input type="checkbox" name="Salmon" value="Salmon" /> Salmon<br />
+
+        <input type="checkbox" name="Cookie" value="Cookie" /> Cookie
+        <input type="checkbox" name="Chocolate" value="Chocolate" /> Chocolate
+        <input type="checkbox" name="Candy" value="Candy" /> Candy<br />
+      </fieldset>
+      <input type="submit" value="Calculate" /><br /><br />
+    </form>
+    <form>
+      <fieldset style="border: 1px sold black; border-style:double">
+        <b>Card :</b>
+        <select name="card">
+          <option value="Samsung" selected>Samsung</option>
+          <option value="Woori">Woori</option>
+          <option value="Kookmin">Kookmin</option>
+          <option value="Shinhan">Shinhan</option>
+          <option value="Lotte">Lotte</option>
+          <option value="Nonghyup">Nognhyup</option> </select
+        ><br />
+        <b>ARS Authentication : </b>
+        <input type="text" name="ars" value="4444" />
+        <input type="submit" value="Request ARS" /><br />
+        <b>Card Number : </b>
+        <input type="text" name="one" /> - <input type="text" name="two" /> -
+        <input type="text" name="three" /> -
+        <input type="text" name="four" /><br />
+        <b>email : </b>
+        <input type="text" name="email" /> <b>@</b>
+        <select name="card">
+          <option value="naver.com">naver.com</option>
+          <option value="kakao.com">kakao.com</option>
+          <option value="gmail.com" selected>gmail.com</option>
+          <option value="nate.com">nate.com</option>
+          <option value="yahoo.com">yahoo.com</option> </select
+        ><br />
+        <b>CVC : </b>
+        <input type="text" name="cvc" /> <br />
+        <b>Card Password : </b>
+        <input type="text" name="card password" />
+      </fieldset>
+    </form>
+
+    <h1>Product Delivery from ABC Mart</h1>
+    <form>
+      <fieldset>
+        <legend><h3>Personal Information</h3></legend>
+        First name :
+        <input type="text" name="first" placeholder="Enter your first name" />
+        <br />
+        Last name :
+        <input type="text" name="last" placeholder="Enter your last name" />
+        <br />
+        Phone Number :
+        <input
+          type="text"
+          name="pn"
+          pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+          title="###-####-####"
+          placeholder="Enter the phone number"
+        />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend><h3>Related to Delivery</h3></legend>
+        Address :
+        <input type="text" name="address" placeholder="Enter your address" />
+        <br />
+        Password for entering the gate :
+        <input type="text" name="gate_password" />
+        <br />
+        Desired delivery datetime :
+        <input
+          type="datetime-local"
+          name="delivery_date"
+          placeholder="Enter the phone number"
+        />
+        <br />
+        Delivery time interval range hours :
+        <input type="number" name="delivery_time" value="3" />
+        <br />
+      </fieldset>
+      <button
+        type="button"
+        onclick="alert('All contents will be used for delivery only!')"
+      >
+        Click the button!
+      </button>
+      <br />
+      <fieldset>
+        <legend><b>Select a free gift:</b></legend>
+        <input type="radio" name="gift" value="a Tissue Box" />a Tissue Box
+        <input type="radio" name="gift" value="a 5% Discount Coupon" />a 5%
+        Discount Coupon <input type="radio" name="gift" value="Bread" />Bread
+        <input type="radio" name="gift" value="A bottle of water" />A bottle of
+        water
+      </fieldset>
+      <br />
+      <b>Message to the delivery man : </b><br />
+      <textarea name="name" rows="4" cols="60"></textarea>
+      <fieldset>
+        <legend><b>Events</b></legend>
+        Choose the city you want to go. Multiple options are possible. <br />
+        <input type="checkbox" name="New York" value="New York" /> New York
+        <input type="checkbox" name="Hongkong" value="Hongkong" /> Hongkong
+        <input type="checkbox" name="Paris" value="Paris" />Paris
+        <input type="checkbox" name="Toronto" value="Toronto" />Toronto
+      </fieldset>
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="submit" value="Reset" />
+    </form>
+  </body>
+</html>
