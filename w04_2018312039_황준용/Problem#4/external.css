@@ -1,0 +1,89 @@
+figure {
+  display: inline-block;
+  width: 20%;
+  height: 20%;
+  vertical-align: top;
+  margin: 1%;
+}
+div.title {
+  color: blue;
+  marin: 0;
+  font-family: "Tangerine";
+}
+.banner {
+  display: inline-block;
+  background-repeat: repeat;
+  width: 33%;
+  margin: 0;
+}
+.player_name {
+  font-size: 1.5em;
+  color: blue;
+  text-align: center;
+}
+.players {
+  width: 100%;
+}
+.footer {
+  background-color: black;
+}
+#text-left {
+  text-align: left;
+}
+div ul li h3,
+li a,
+li {
+  color: white;
+}
+#title_font {
+  font-size: 3em;
+}
+#description_font {
+  color: rgb(71, 72, 228);
+  text-decoration: underline;
+  font-size: 1em;
+}
+#description2_font {
+  color: rgb(0, 110, 255);
+  font-size: 0.9em;
+}
+#description2_font::first-letter {
+  color: rgb(167, 221, 14);
+  text-decoration: overline;
+}
+#legends_font {
+  font-size: 1.3em;
+  color: rgb(71, 72, 228);
+  text-decoration: underline;
+}
+
+#player_description_font {
+  font-size: 0.8em;
+}
+#drogba_font {
+  font-variant: small-caps;
+}
+#lampard_font {
+  font-family: Tangerine;
+}
+#john_terry_font {
+  font-style: italic;
+}
+#cech_font {
+  background-color: rgb(174, 227, 43);
+  color: black;
+}
+h1[id~="drogba_font"]:hover {
+  background-color: blue;
+  color: white;
+}
+h1[id|="lampard_font"]:hover {
+  color: red;
+}
+h1[id*="terry"]:hover {
+  background-color: blue;
+  color: white;
+}
+h1[id*="font"]:hover {
+  font-style: italic;
+}

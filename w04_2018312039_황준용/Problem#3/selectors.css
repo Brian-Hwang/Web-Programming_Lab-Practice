@@ -1,0 +1,22 @@
+.headerh1 {
+  font-size: 2.5em;
+  color: gold;
+}
+.MsoBodyText21 {
+  text-decoration: underline;
+  text-shadow: 20px 8px 0px #aaa;
+}
+p.newstyle {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.MsoBodyText1:hover,
+.MsoBodyText41:hover {
+  background-color: skyblue;
+}
+
+.MsoBodyText1:active,
+.MsoBodyText41:active {
+  background-color: red;
+}

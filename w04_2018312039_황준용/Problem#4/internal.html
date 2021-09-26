@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="http://fonts.googleapis.com/css?family=Tangerine"
+      rel="stylesheet"
+    />
+
+    <style>
+      figure {
+        display: inline-block;
+        width: 20%;
+        height: 20%;
+        vertical-align: top;
+        margin: 1%;
+      }
+      div.title {
+        color: blue;
+        marin: 0;
+        font-family: "Tangerine";
+      }
+      div ul li h3,
+      li a,
+      li {
+        color: white;
+      }
+      .banner {
+        display: inline-block;
+        background-repeat: repeat;
+        width: 33%;
+        margin: 0;
+      }
+      .player_name {
+        font-size: 1.5em;
+        color: blue;
+        text-align: center;
+      }
+      .players {
+        width: 100%;
+      }
+      .footer {
+        background-color: black;
+      }
+      #text-left {
+        text-align: left;
+      }
+      #title_font {
+        font-size: 3em;
+      }
+      #description_font {
+        color: rgb(71, 72, 228);
+        text-decoration: underline;
+        font-size: 1em;
+      }
+      #description2_font {
+        color: rgb(0, 110, 255);
+        font-size: 0.9em;
+      }
+      #description2_font::first-letter {
+        color: rgb(167, 221, 14);
+        text-decoration: overline;
+      }
+      #legends_font {
+        font-size: 1.3em;
+        color: rgb(71, 72, 228);
+        text-decoration: underline;
+      }
+
+      #player_description_font {
+        font-size: 0.8em;
+      }
+      #drogba_font {
+        font-variant: small-caps;
+      }
+      #lampard_font {
+        font-family: Tangerine;
+      }
+      #john_terry_font {
+        font-style: italic;
+      }
+      #cech_font {
+        background-color: rgb(174, 227, 43);
+        color: black;
+      }
+      h1[id~="drogba_font"]:hover {
+        background-color: blue;
+        color: white;
+      }
+      h1[id|="lampard_font"]:hover {
+        color: red;
+      }
+      h1[id*="terry"]:hover {
+        background-color: blue;
+        color: white;
+      }
+      h1[id*="font"]:hover {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="title_font">Chelsea F.C.</h1>
+    </div>
+    <img
+      class="banner"
+      src="https://www.inspiresport.com/wp-content/uploads/2019/06/Chelsea-Banner.png"
+      alt=""
+    />
+    <img
+      class="banner"
+      src="https://www.inspiresport.com/wp-content/uploads/2019/06/Chelsea-Banner.png"
+      alt=""
+    />
+    <img
+      class="banner"
+      src="https://www.inspiresport.com/wp-content/uploads/2019/06/Chelsea-Banner.png"
+      alt=""
+    />
+
+    <h2 id="description_font">
+      Chelsea Football Club are an English professional football club based in
+      Fulham, West London.
+    </h2>
+    <h3 id="description2_font">
+      Founded in 1905, the club competes in the Premier League, the top division
+      of English football.
+    </h3>
+    <hr />
+    <h2 id="legends_font">LEGENDS</h2>
+
+    <figure>
+      <img
+        class="players"
+        src="https://en.africatopsports.com/wp-content/uploads/2021/07/drogba.jpg"
+      />
+      <figcaption>
+        <h1 class="player_name" id="drogba_font">Didier Drogba</h1>
+        <p id="player_description_font">
+          Didier Yves Drogba Tébily is an Ivorian retired professional
+          footballer who played as a striker. He is the all-time top scorer and
+          former captain of the Ivory Coast national team.
+        </p>
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="players"
+        src="https://tmssl.akamaized.net/images/foto/normal/frank-lampard-chelsea-1599653244-46999.jpg?lm=1599653250"
+      />
+      <figcaption>
+        <h1 class="player_name" id="lampard_font">
+          Frank Lampard
+        </h1>
+        <p id="player_description_font">
+          Frank James Lampard OBE is an English professional football manager
+          and former player who was the head coach of Premier League club
+          Chelsea from July 2019 until January 2021. He is widely considered to
+          be one of Chelsea's greatest ever players, and one of the greatest
+          midfielders of his generation.
+        </p>
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="players"
+        src="https://images2.minutemediacdn.com/image/upload/c_fill,w_912,h_516,f_auto,q_auto,g_auto/shape/cover/sport/fbl-eur-c1-chelsea-psg-5db6f781f587c2241d000001.jpg"
+      />
+      <figcaption>
+        <h1 class="player_name" id="john_terry_font">
+          John Terry
+        </h1>
+        <p id="player_description_font">
+          John George Terry is an English professional football coach and former
+          player who played as a centre-back. He was previously captain of
+          Chelsea, the England national team and Aston Villa. He was most
+          recently the assistant head coach at the latter.
+        </p>
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        class="players"
+        src="https://p4.wallpaperbetter.com/wallpaper/321/571/604/chelsea-fc-petr-cech-wallpaper-preview.jpg"
+      />
+      <figcaption>
+        <h1 class="player_name" id="cech_font">
+          Petr Čech
+        </h1>
+        <p id="player_description_font">
+          Petr Čech is a Czech former professional footballer who is a technical
+          and performance advisor for English club Chelsea. He also plays
+          semi-professional ice hockey as a goaltender for Guildford Phoenix.
+        </p>
+      </figcaption>
+    </figure>
+    <hr />
+    <div class="footer" id="text-left">
+      <ul>
+        <li>
+          <h3 id="footer_font">
+            MEGASTORE:
+            <a href="https://www.chelseamegastore.com/en/"
+              >https://www.chelseamegastore.com/en/</a
+            >
+          </h3>
+        </li>
+        <li>
+          <h3 id="footer_font">
+            WIKIPEDIA:
+            <a href="https://en.wikipedia.org/wiki/Chelsea_F.C."
+              >https://en.wikipedia.org/wiki/Chelsea_F.C.</a
+            >
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
