@@ -5,10 +5,19 @@ figure {
   vertical-align: top;
   margin: 1%;
 }
+
+/* DIV TAG NUMBER 1: CLASS */
 div.title {
   color: blue;
   marin: 0;
+  /* TEXT STYLE1: WEB FONT */
   font-family: "Tangerine";
+}
+/* DIV TAG NUMBER 2: DESCEDANT */
+div ul li h3,
+li a,
+li {
+  color: white;
 }
 .banner {
   display: inline-block;
@@ -27,13 +36,17 @@ div.title {
 .footer {
   background-color: black;
 }
+.description2 {
+}
+.description2::first-letter {
+  /* COLOR EXPRESSION 1: PSEUDO ELEMENT */
+  color: rgb(167, 221, 14);
+  /* TEXT STYLE 2: PSEUDO ELEMENT */
+  text-decoration: overline;
+}
+/* DIV TAG NUMBER 3: ID */
 #text-left {
   text-align: left;
-}
-div ul li h3,
-li a,
-li {
-  color: white;
 }
 #title_font {
   font-size: 3em;
@@ -47,10 +60,6 @@ li {
   color: rgb(0, 110, 255);
   font-size: 0.9em;
 }
-#description2_font::first-letter {
-  color: rgb(167, 221, 14);
-  text-decoration: overline;
-}
 #legends_font {
   font-size: 1.3em;
   color: rgb(71, 72, 228);
@@ -59,6 +68,8 @@ li {
 
 #player_description_font {
   font-size: 0.8em;
+}
+#player_description_font::first-line {
 }
 #drogba_font {
   font-variant: small-caps;
@@ -73,14 +84,25 @@ li {
   background-color: rgb(174, 227, 43);
   color: black;
 }
-h1[id~="drogba_font"]:hover {
+.drogba {
+}
+.lampard {
+}
+.terry {
+}
+.cech {
+}
+h1[class~="drogba"]:hover {
+  /* COLOR EXPRESSION 2: ATTRIBUTE SELECTOR */
   background-color: blue;
   color: white;
 }
-h1[id|="lampard_font"]:hover {
+h1[class|="lampard"]:hover {
+  /* COLOR EXPRESSION 3: ATTRIBUTE SELECTOR */
   color: red;
 }
-h1[id*="terry"]:hover {
+h1[class~="terry"]:hover {
+  /* COLOR EXPRESSION 4: ATTRIBUTE SELECTOR */
   background-color: blue;
   color: white;
 }

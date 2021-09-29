@@ -14,11 +14,15 @@
         vertical-align: top;
         margin: 1%;
       }
+
+      /* DIV TAG NUMBER 1: CLASS */
       div.title {
         color: blue;
         marin: 0;
+        /* TEXT STYLE1: WEB FONT */
         font-family: "Tangerine";
       }
+      /* DIV TAG NUMBER 2: DESCEDANT */
       div ul li h3,
       li a,
       li {
@@ -41,6 +45,15 @@
       .footer {
         background-color: black;
       }
+      .description2 {
+      }
+      .description2::first-letter {
+        /* COLOR EXPRESSION 1: PSEUDO ELEMENT */
+        color: rgb(167, 221, 14);
+        /* TEXT STYLE 2: PSEUDO ELEMENT */
+        text-decoration: overline;
+      }
+      /* DIV TAG NUMBER 3: ID */
       #text-left {
         text-align: left;
       }
@@ -56,10 +69,6 @@
         color: rgb(0, 110, 255);
         font-size: 0.9em;
       }
-      #description2_font::first-letter {
-        color: rgb(167, 221, 14);
-        text-decoration: overline;
-      }
       #legends_font {
         font-size: 1.3em;
         color: rgb(71, 72, 228);
@@ -68,6 +77,8 @@
 
       #player_description_font {
         font-size: 0.8em;
+      }
+      #player_description_font::first-line {
       }
       #drogba_font {
         font-variant: small-caps;
@@ -82,14 +93,25 @@
         background-color: rgb(174, 227, 43);
         color: black;
       }
-      h1[id~="drogba_font"]:hover {
+      .drogba {
+      }
+      .lampard {
+      }
+      .terry {
+      }
+      .cech {
+      }
+      h1[class~="drogba"]:hover {
+        /* COLOR EXPRESSION 2: ATTRIBUTE SELECTOR */
         background-color: blue;
         color: white;
       }
-      h1[id|="lampard_font"]:hover {
+      h1[class|="lampard"]:hover {
+        /* COLOR EXPRESSION 3: ATTRIBUTE SELECTOR */
         color: red;
       }
-      h1[id*="terry"]:hover {
+      h1[class*="terry"]:hover {
+        /* COLOR EXPRESSION 4: ATTRIBUTE SELECTOR */
         background-color: blue;
         color: white;
       }
@@ -122,7 +144,7 @@
       Chelsea Football Club are an English professional football club based in
       Fulham, West London.
     </h2>
-    <h3 id="description2_font">
+    <h3 class="description2" id="description2_font">
       Founded in 1905, the club competes in the Premier League, the top division
       of English football.
     </h3>
@@ -135,7 +157,7 @@
         src="https://en.africatopsports.com/wp-content/uploads/2021/07/drogba.jpg"
       />
       <figcaption>
-        <h1 class="player_name" id="drogba_font">Didier Drogba</h1>
+        <h1 class="player_name drogba" id="drogba_font">Didier Drogba</h1>
         <p id="player_description_font">
           Didier Yves Drogba Tébily is an Ivorian retired professional
           footballer who played as a striker. He is the all-time top scorer and
@@ -149,7 +171,7 @@
         src="https://tmssl.akamaized.net/images/foto/normal/frank-lampard-chelsea-1599653244-46999.jpg?lm=1599653250"
       />
       <figcaption>
-        <h1 class="player_name" id="lampard_font">
+        <h1 class="player_name lampard" id="lampard_font">
           Frank Lampard
         </h1>
         <p id="player_description_font">
@@ -167,7 +189,7 @@
         src="https://images2.minutemediacdn.com/image/upload/c_fill,w_912,h_516,f_auto,q_auto,g_auto/shape/cover/sport/fbl-eur-c1-chelsea-psg-5db6f781f587c2241d000001.jpg"
       />
       <figcaption>
-        <h1 class="player_name" id="john_terry_font">
+        <h1 class="player_name terry" id="john_terry_font">
           John Terry
         </h1>
         <p id="player_description_font">
@@ -184,7 +206,7 @@
         src="https://p4.wallpaperbetter.com/wallpaper/321/571/604/chelsea-fc-petr-cech-wallpaper-preview.jpg"
       />
       <figcaption>
-        <h1 class="player_name" id="cech_font">
+        <h1 class="player_name cech" id="cech_font">
           Petr Čech
         </h1>
         <p id="player_description_font">
@@ -200,6 +222,7 @@
         <li>
           <h3 id="footer_font">
             MEGASTORE:
+            <!-- Ability to go to another site when you click on a specific context -->
             <a href="https://www.chelseamegastore.com/en/"
               >https://www.chelseamegastore.com/en/</a
             >
@@ -208,6 +231,7 @@
         <li>
           <h3 id="footer_font">
             WIKIPEDIA:
+            <!-- Ability to go to another site when you click on a specific context -->
             <a href="https://en.wikipedia.org/wiki/Chelsea_F.C."
               >https://en.wikipedia.org/wiki/Chelsea_F.C.</a
             >
