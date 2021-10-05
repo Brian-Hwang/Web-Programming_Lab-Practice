@@ -659,12 +659,28 @@ main {
 .details__color--brown {
   background: brown;
 }
-/* .details__color--olivegreen {
-  background: #c3b091;
+.details__color--orange {
+  background: #fd6a02;
 }
-.details__color--olivegreen {
-  background: #c3b091;
-} */
+.details__color--gold {
+  background: #ffd700;
+}
+.details__color--coral {
+  background: #ff7f50;
+}
+.details__color--lavendar {
+  background: #e6e6fa;
+}
+.details__color--lightpink {
+  background: #ffb6c1;
+}
+.details__color--greenyellow {
+  background: #adff2f;
+}
+.details__color--violet {
+  background: #421c52;
+}
+
 .details__inner--grid {
   display: grid;
   padding: 1rem;
@@ -870,9 +886,9 @@ main {
   .boxnav__item {
     flex: none;
     border: 1px dotted red;
-    width: 150px;
     height: 50px;
     opacity: 0.7;
+    width: 50px;
   }
   .details-wrap {
     position: absolute;
