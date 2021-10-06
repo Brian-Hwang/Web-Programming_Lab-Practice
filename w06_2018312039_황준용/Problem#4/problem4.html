@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <style>
+      .square {
+        background: lightblue;
+        border: 1px solid blue;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        text-align: center;
+        display: inline-block;
+      }
+      .square.fade-in {
+        animation-name: fade;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      .square.fade-out {
+        animation-name: fade;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-fill-mode: none;
+      }
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .square.blink {
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .square.shake {
+        animation-name: shake;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      @keyframes shake {
+        0% {
+          transform: rotate(-23deg);
+        }
+        25% {
+          transform: rotate(64deg);
+        }
+        50% {
+          transform: rotate(-42deg);
+        }
+        75% {
+          transform: rotate(72deg);
+        }
+        100% {
+          transform: rotate(-23deg);
+        }
+      }
+
+      .square.bounce {
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: linear;
+        animation-direction: reverse;
+        animation-fill-mode: none;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translate(0px, 30px);
+        }
+        25% {
+          transform: translate(-30px, 0px);
+        }
+        50% {
+          transform: translate(0px, -30px);
+        }
+        75% {
+          transform: translate(30px, 0px);
+        }
+        100% {
+          transform: translate(0px, 30px);
+        }
+      }
+      .square.zoom {
+        animation-name: zoom;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      @keyframes zoom {
+        0% {
+          transform: scale(0.8, 0.8);
+        }
+        50% {
+          transform: scale(1.2, 1.2);
+        }
+        100% {
+          transform: scale(0.8, 0.8);
+        }
+      }
+      .square.dizzy {
+        animation-name: dizzy;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      @keyframes dizzy {
+        0% {
+          transform: skew(20deg, 23deg);
+          background-color: orange;
+        }
+        25% {
+          transform: skew(0deg, 23deg);
+          background-color: blue;
+        }
+        50% {
+          transform: skew(62deg, 20deg);
+          background-color: red;
+        }
+        75% {
+          transform: skew(10deg, 60deg);
+          background-color: green;
+        }
+        100% {
+          transform: skew(20deg, 23deg);
+          background-color: purple;
+        }
+      }
+      .square.round {
+        animation-name: round;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        /* ------------------------------------- */
+        animation-timing-function: cubic-bezier(1, 1);
+        animation-direction: reverse;
+        animation-fill-mode: none;
+      }
+      @keyframes round {
+        0% {
+          transform: rotate(0deg);
+          border-radius: 0% 0% 0% 0%;
+        }
+        /* 25% {
+          transform: rotate(-90deg);
+          border-radius: 50% 50% 50% 50%;
+        } */
+        50% {
+          transform: rotate(-180deg);
+          border-radius: 100% 100% 100% 100%;
+        }
+        /* 75% {
+          transform: rotate(-270deg);
+          border-radius: 50% 50% 50% 50%;
+        } */
+        100% {
+          transform: rotate(-360deg);
+          border-radius: 0% 0% 0% 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square fade-in"><h3>Fade-in</h3></div>
+    <div class="square fade-out"><h3>Fade-out</h3></div>
+    <div class="square blink"><h3>Blink</h3></div>
+    <div class="square shake"><h3>Shake</h3></div>
+    <div class="square bounce"><h3>Bounce</h3></div>
+    <div class="square zoom"><h3>Zoom</h3></div>
+    <div class="square dizzy"><h3>Dizzy</h3></div>
+    <div class="square round"><h3>Round shaped</h3></div>
+  </body>
+</html>
