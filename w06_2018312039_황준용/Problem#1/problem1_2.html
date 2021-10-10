@@ -4,54 +4,113 @@
     <meta charset="utf-8" />
     <title></title>
     <style media="screen">
-      body{
-        background-color:skyblue;
+      body {
+        background-color: skyblue;
       }
       #jb-container {
-        background-color:white;
+        background-color: white;
         width: 940px;
         margin: 0px auto;
         padding: 20px;
-        border: 1px solid #bcbcbc;
+        border: 2px dotted #bcbcbc;
       }
       #jb-header {
+        height: 50px;
+        padding: 0px 20px 30px 30px;
+        /* margin-bottom: 20px; */
+        border: 2px dotted #bcbcbc;
+      }
+      .jb-content {
+        padding: 30px;
+        border: 2px dotted #bcbcbc;
+        /* background-color: blue; */
+        height: 500px;
+        align-items: center;
+        /* align-content: space-around; */
+        /* align-items: center; */
+      }
+      .jb-content-left {
+        padding: 0px 30px;
+
+        box-sizing: border-box;
+        float: left;
+        width: 33.3333%;
+        height: 500px;
+        border: 2px dotted #bcbcbc;
+      }
+      .jb-content-right {
+        box-sizing: border-box;
+        padding: 0px 30px;
+        float: right;
+        width: 33.3333%;
+        height: 500px;
+        border: 2px dotted #bcbcbc;
+      }
+      #grey {
+        background-color: lightgray;
+      }
+      #jb-sidebar {
+        width: 260px;
         padding: 20px;
         margin-bottom: 20px;
+        float: right;
         border: 1px solid #bcbcbc;
       }
-      #jb-content{
-        width:580px;
-        padding:20px;
-        margin-bottom: 20px
-        border: 1px solid #bcbcbc;
-      }
-      #jb-sidebar{
-        width:260px;
-        padding:20px;
-        magin-bottom:20px;
-        float:right;
-        border: 1px solid #bcbcbc;
-      }
-      #jb-footer{
+      #jb-footer {
+        box-sizing: border-box;
+
         clear: both;
-        backgroundpadding:20px;
-        border: 1px solid #bcbcbc;
+        border: 2px dotted #bcbcbc;
+        padding: 0px 30px;
       }
     </style>
   </head>
   <body>
     <div id="jb-container">
       <div id="jb-header">
-        <h1>2-Column Layout</h1>
+        <h2>#Header: Time Barnes Lee Speech</h2>
       </div>
-      <div id="jb-content">
-        <h2>
-          But I’ll start by going back to the beginning of the Web. In fact let
-          us go a little bit further back…
-        </h2>
+      <div class="jb-content">
+        <div class="jb-content-left" , id="grey">
+          <h2>
+            #content1
+          </h2>
+          <p>
+            But I' II start by going back to the beginning of the Web. In fact
+            let us go a little bit further back - 1989. I'm a programmer. I'm
+            working at CERN and a software engineer. I'm building pieces of
+            software to work in that huge accelerator - that huge collider -
+            that they had built .. .
+          </p>
+        </div>
+        <div class="jb-content-left">
+          <h2>
+            #content2
+          </h2>
+          <p>
+            So, it's big and it's complicated and for your brain we have
+            cognitive science which brings together lots of different
+            disciplines to look at the brain for we decided we need websites. So
+            we sta1ted talking about websites three years ago ...
+          </p>
+        </div>
+        <div class="jb-content-right" , id="grey">
+          <h2>
+            #content3
+          </h2>
+          <p>
+            So, Web Science now adds to the standards. We now have a separate
+            but importantly connected body of effort going on towards the
+            science, not the science of studying it but of course also building
+            it, for engineering it. ..
+          </p>
+        </div>
       </div>
       <div id="jb-footer">
-        <p>Copyright</p>
+        <p>
+          The #<b>footer</b> does not need to be 'cleared' because no floats are
+          used
+        </p>
       </div>
     </div>
   </body>
