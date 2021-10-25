@@ -1,0 +1,300 @@
+:root{
+    --logo_left: 20px;
+    --home_left: 80px;
+    --space: 20px;
+    --arrow_right: 20px;
+    --account_right: 80px;
+    --message_right: 140px;
+    --notification_right: 200px;
+    --search_width: 75vw;
+}
+body{
+    margin: 0px;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+input{
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+    justify-content: center;
+    align-content: center;
+}
+.c-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+/* Common configuration */
+.logo-icon{
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    margin: 14px;
+    left: var(--logo_left);
+}
+.logo-icon img{
+    height: 100%;
+    width: 100%;
+}
+.notification-icon{
+    position: absolute;
+    margin: 14px;
+    right: var(--notification_right);
+    height: 28px;
+    width: 28px;
+}
+.notification-icon img{
+    height: 100%;
+    width: 100%;
+    filter: contrast(0.25);
+}
+.message-icon{
+    position: absolute;
+    margin: 4px;
+    right: var(--message_right);
+    height: 28px;
+    width: 28px;
+    margin: 14px;
+}
+.message-icon img{
+    height: 100%;
+    width: 100%;
+    filter: contrast(0.25);
+}
+.account-icon{
+    position: absolute;
+    margin: 14px;
+    right: var(--account_right);
+    height: 28px;
+    width: 28px;
+}
+.account-icon img{
+    height: 100%;
+    width: 100%;
+    filter: contrast(0.25);
+}
+.arrow-icon{
+    position: absolute;
+    margin: 14px;
+    right: var(--arrow_right);
+    height: 28px;
+    width: 28px;
+}
+.arrow-icon img{
+    height: 100%;
+    width: 100%;
+    filter: contrast(0.25);
+}   
+
+/* Mobile: width < 768px */
+@media only screen and (max-width: 47.9375em) {
+    .display.area{
+        max-width: 480px;
+    }
+    .row {
+        margin: auto;
+        min-width: 480px;
+    }
+    .col {
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 420px;
+    }
+}
+
+/* Table: 768px <= width < 1024px */
+@media only screen and  (min-width: 48em) {
+    .display.area{
+        max-width: 768px;
+    }
+    .row {
+        margin: auto;
+        min-width: 751px;
+    }
+    .col {
+        height: 420px;
+        justify-content: center;
+        place-self: center;
+    }
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+    .control-bar {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        height: 56px;
+        padding: 8px 0px 8px 0px;
+        margin-bottom: 13px;
+        width: 100%;
+        z-index: 10000;
+        background-color: white;
+    }
+    .control-bar .row{
+        height: 56px;
+    }
+    .home-button{
+        position: absolute;
+        align-self: center;
+        left: var(--home_left);
+        height: 48px;
+        min-width: 80px;
+        margin: 4px;
+        border-radius: 24px;
+        background-color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        vertical-align:middle;
+    }
+    .home-button-text{
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        top: 14px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+    .search-box{
+        position: absolute;
+        margin: 4px;
+        left: 180px;
+        height: 48px;
+        width: calc(100vw - var(--notification_right) - var(--home_left) - 180px);
+        border-radius: 24px;
+        background-color: rgb(245, 245, 245);
+        border-color: rgb(245, 245, 245);
+    }
+    .search-icon{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 2%;
+        top: 30%;
+        display: block;
+    }
+    .search-box-input{
+        position: absolute;
+        left: 50px;
+        height: 48px;
+        width: 75%;
+        font-size: 16px;
+        border-radius: 24px;
+        background-color: rgb(245, 245, 245);
+        border-color: rgb(245, 245, 245);
+        display: block;
+    }
+    .dropdown{
+        position: relative;
+        z-index: 1000;
+    }
+    .dropdown-child{
+        position: absolute;
+        display: none;
+        background-color:rgb(247, 245, 242);
+        border-radius: 24px;
+        height: 500px;
+        width: 300px;
+        top: 50px;
+        left: -300px;
+    }
+    .dropdown-child a{
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .dropdown:hover .dropdown-child{
+        display: block;
+    }
+    .dropdown-mini-menu{
+        position: relative;
+        height: 50px;
+        width: 300px;
+        padding-bottom: 20px;
+    }
+    .dropdown-mini-menu-text{
+        position: relative;
+        font-size: 12px;
+        padding: 10px 10px 10px 10px;
+    }
+    .dropdown-mini-menu img{
+        position: relative;
+        width: 17%; 
+        height: 100%; 
+        left: 20px;
+        border-radius: 24px;
+        background-color: cadetblue;
+    }
+    .dropdown-mini-menu-info{
+        position: absolute;
+        height: 50px;
+        width: 250px;
+        left: 80px;
+        top: 0px;
+    }
+    .dropdown-mini-menu-info ul{
+        padding: 0px;
+        margin: 0px;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 2px 0px 2px 0px;
+    }
+    .image-frame{
+        position: absolute;
+        width: 240px;
+        height: 407px;
+    }
+    .image-frame-img{
+        position: absolute;
+        width: 224px;
+        height: 335px;
+        left: 8px;
+    }
+    .image-frame-info{
+        position: absolute;
+        width: 224px;
+        height: 50px;
+        left: 8px;
+        top: 347px;
+    }
+    .display {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        top: 80px;
+    }
+    .display.area{
+        max-width: 1920px;
+    }
+    .row{
+        margin: auto;
+        justify-content: center;
+        min-width: 1920px;
+    }
+    .col {
+        height: 427px;
+    }
+    .l-2 {
+        display: block;
+        flex: 0 0 13%;
+        max-width: 13%;
+    }
+}
