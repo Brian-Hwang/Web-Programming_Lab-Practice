@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="http://fonts.googleapis.com/css?family=Tangerine|Roboto+Condensed|Inconsolata"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/master.css" />
+    <link rel="stylesheet" href="src/css/supporter.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <a href="index.html">
+          <div class="logo-block">
+            <img src="src/img/logo.png" alt="" />
+            <h1>Chelsea <em>Football Club</em></h1>
+          </div>
+        </a>
+        <ul class="selection">
+          <li class="moveTo"><a href="HOF.html">Wall Papers</a></li>
+          <li class="moveTo">
+            <a href="History.html">Club History</a>
+          </li>
+          <li class="moveOut"><a href="players.html">Players</a></li>
+          <li class="moveTo"><a href="supporter.html">Supporter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title-header supporter-format">
+      <div class="supporter-header">
+        <img src="src/img/logo.png" alt="" />
+        <h2 id="roboto-font">BECOME A <em>SUPPORTER</em></h2>
+      </div>
+
+      <h1>Personal Information</h1>
+      <hr />
+      <form>
+        <fieldset>
+          <legend><h3>Basics</h3></legend>
+          First name :
+          <input type="text" name="first" placeholder="Enter your first name" />
+          <br />
+          Last name :
+          <input type="text" name="last" placeholder="Enter your last name" />
+          <br />
+          Phone Number :
+          <input
+            type="text"
+            name="pn"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            title="###-####-####"
+            placeholder="Enter the phone number"
+          />
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend><h3>Related to Delivery</h3></legend>
+          Address :
+          <input type="text" name="address" placeholder="Enter your address" />
+          <br />
+          Password for entering the gate :
+          <input type="text" name="gate_password" />
+          <br />
+          Desired delivery datetime :
+          <input
+            type="datetime-local"
+            name="delivery_date"
+            placeholder="Enter the phone number"
+          />
+          <br />
+          Delivery time interval range hours :
+          <input type="number" name="delivery_time" value="3" />
+          <br />
+        </fieldset>
+        <br />
+        <h1>True Chelsea Survey</h1>
+        <hr />
+        <fieldset>
+          <legend><b>How you became a fan</b></legend>
+          <input type="radio" name="fan" />Premier League
+          <input type="radio" name="fan" />Champions League
+          <input type="radio" name="fan" />Local Fan
+          <input type="radio" name="fan" />ETC.
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend><b>Best Player</b></legend>
+          For a quick survey, please choose which player is best. <br />
+          Multiple options are possible.
+          <br />
+          <br />
+          <input type="checkbox" /> N'Golo Kante
+          <input type="checkbox" /> Lomelo Lukaku
+          <input type="checkbox" />Havertz <input type="checkbox" />Jorginho
+        </fieldset>
+        <br />
+      </form>
+      <br />
+      <h1>Payment</h1>
+      <hr />
+      <form>
+        <fieldset style="border: 1px sold black; border-style:double">
+          <b>Premium Supporters are charged $14 annully with gift cards.</b>
+          <br />
+          <b>Card :</b>
+          <select name="card">
+            <option value="Samsung" selected>Samsung</option>
+            <option value="Woori">Woori</option>
+            <option value="Kookmin">Kookmin</option>
+            <option value="Shinhan">Shinhan</option>
+            <option value="Lotte">Lotte</option>
+            <option value="Nonghyup">Nognhyup</option> </select
+          ><br />
+          <b>ARS Authentication : </b>
+          <input type="text" name="ars" value="" />
+          <input type="submit" value="Request ARS" /><br />
+          <b>Card Number : </b>
+          <input size="4" type="text" name="one" /> -
+          <input size="4" type="text" name="two" /> -
+          <input size="4" type="text" name="three" /> -
+          <input size="4" type="text" name="four" /><br />
+          <b>email : </b>
+          <input type="text" name="email" /> <b>@</b>
+          <select name="card">
+            <option value="naver.com">naver.com</option>
+            <option value="kakao.com">kakao.com</option>
+            <option value="gmail.com" selected>gmail.com</option>
+            <option value="nate.com">nate.com</option>
+            <option value="yahoo.com">yahoo.com</option> </select
+          ><br />
+          <b>CVC : </b>
+          <input size="4" type="text" name="cvc" /> <br />
+          <b>Card Password : </b>
+          <input size="4" type="text" name="card password" />
+        </fieldset>
+      </form>
+      <br />
+      <input type="submit" value="Submit" />
+    </div>
+    <div class="footer">
+      <div class="social">
+        <ul>
+          <li>
+            <a href="#"> <img src="src/img/facebook.jpg" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="src/img/twitter.jpg" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="src/img/youtube.jpg" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"> <img src="src/img/instagram.jpg" alt="" /> </a>
+          </li>
+        </ul>
+      </div>
+      <p>
+        © 2021 Chelsea FC. by Brian Hwang All rights reserved. No part of this
+        site may be reproduced without our written permission.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  background-image: url("https://wallpaperaccess.com/full/545474.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%;
+}
+
+.supporter-format {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px;
+  display: table;
+  align-items: center;
+  width: 60%;
+  background-color: white;
+}
+
+.supporter-format em {
+  font-style: normal;
+  color: #034694;
+}
+.supporter-header img {
+  transform: rotate(-20deg);
+  width: 25%;
+  height: 25%;
+  float: left;
+  transition: all 0.5s;
+}
+
+.supporter-header img:hover {
+  transform: rotate(20deg);
+}
+
+.supporter-header {
+  /* background-color: black; */
+  width: 70%;
+  margin: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.supporter-header h2 {
+  align-self: center;
+  margin-left: 40px;
+  font-size: 60px;
+}
+
+fieldset {
+  line-height: 1.8;
+}
+
+/* Mobile: width < 768px */
+@media only screen and (max-width: 50em) {
+  body {
+    margin-top: 150px;
+  }
+  .supporter-header h2 {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+  }
+  .supporter-header img {
+    display: none;
+    position: absolute;
+  }
+}
+/* Table: 768px <= width < 1024px */
+@media only screen and (min-width: 50em) and (max-width: 64em) {
+  body {
+    margin-top: 150px;
+  }
+  .supporter-header img {
+    display: none;
+    position: absolute;
+  }
+  .supporter-header h2 {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    font-size: 60px;
+  }
+}

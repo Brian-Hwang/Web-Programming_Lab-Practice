@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  background-color: #001489;
+  z-index: 100;
+  height: 130px;
+}
+.social {
+  display: table; /* Allow the centering to work */
+  margin: 0 auto;
+}
+.social ul {
+  position: relative;
+  margin: 0;
+  margin-top: 15px;
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+}
+.social li {
+  display: inline;
+  text-align: center;
+  padding: 25px;
+}
+
+p {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}

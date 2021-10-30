@@ -1,0 +1,138 @@
+.video {
+  position: relative;
+}
+
+#background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: grayscale(100%);
+}
+
+.supporter-recruit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.video .message {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.video .message em {
+  color: #034694;
+  font-weight: 900;
+}
+.video .message h1 {
+  font-size: 130px;
+}
+
+.video .message h3 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.video .supporter-button {
+  display: inline-block;
+  align-items: center;
+  text-shadow: none;
+  align-self: center;
+  margin: 0;
+  margin-top: 30px;
+  /* background-color: white; */
+  /* font-size: 20px; */
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 12px 23px;
+  color: white;
+  /* width: 40%; */
+  vertical-align: middle;
+  transition: all 0.3s;
+  background-color: #034694;
+}
+.video .supporter-button a {
+  color: white;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.video .supporter-button:hover {
+  background-color: rgb(28, 101, 198);
+}
+
+.recent-match {
+  margin: 20px;
+  position: relative;
+}
+
+.recent-match-container {
+  margin-top: 50px;
+  /* padding-bottom: 50px; */
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px solid blue; */
+}
+
+.recent-match-container img {
+  align-self: center;
+  width: 100%;
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  /* ------------------------------------- */
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Mobile: width < 768px */
+@media only screen and (max-width: 50em) {
+  .recent-match-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Table: 768px <= width < 1024px */
+@media only screen and (min-width: 50em) and (max-width: 64em) {
+  .recent-match-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+}

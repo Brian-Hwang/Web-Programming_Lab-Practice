@@ -1,0 +1,114 @@
+.history-format {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px;
+  display: table;
+  align-items: center;
+  width: 90%;
+  background-color: white;
+  text-align: center;
+}
+.history-format img {
+  width: 50%;
+}
+
+.contet {
+  display: flex;
+}
+
+.history-format .content p {
+  text-align: left;
+  font-size: 20px;
+  color: black;
+}
+.history-format h2 {
+  margin-top: 30px;
+}
+.history-format .content h3 {
+  margin-top: 20px;
+}
+.content-p {
+  float: left;
+  width: 70%;
+}
+.information {
+  float: right;
+  width: 20%;
+  background-color: rgb(93, 145, 175);
+  border: 1px solid black;
+  align-items: center;
+  text-align: center;
+}
+
+.information img {
+  margin: 30px;
+  width: 40%;
+}
+.information table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 12px;
+}
+
+.information th {
+  font-size: 18px;
+}
+
+.information td {
+  font-size: 15px;
+  color: blue;
+}
+
+/* Mobile: width < 768px */
+@media only screen and (max-width: 50em) {
+  body {
+    margin-top: 150px;
+  }
+  .history-format {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .information {
+    width: 80%;
+    margin: 0;
+    margin-top: 20px;
+    float: none;
+  }
+  .content-p {
+    /* text-align: center; */
+    /* background-color: black; */
+    float: none;
+  }
+}
+/* Table: 768px <= width < 1024px */
+@media only screen and (min-width: 50em) and (max-width: 64em) {
+  body {
+    margin-top: 150px;
+  }
+  .history-format {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .information {
+    width: 80%;
+    margin: 0;
+    margin-top: 20px;
+    float: none;
+  }
+  .content-p {
+    text-align: center;
+    /* background-color: black; */
+    float: none;
+  }
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+}

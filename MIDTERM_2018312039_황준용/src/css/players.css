@@ -1,0 +1,155 @@
+/* DIV TAG NUMBER 1: CLASS */
+div.title {
+  color: blue;
+  marin: 0;
+  /* TEXT STYLE1: WEB FONT */
+  font-family: "Tangerine";
+}
+/* DIV TAG NUMBER 2: DESCEDANT */
+div ul li h3,
+li a,
+li {
+  color: white;
+}
+
+.player_name {
+  font-size: 1.5em;
+  color: blue;
+  text-align: center;
+}
+.players {
+  width: 100%;
+}
+.description2 {
+}
+.description2::first-letter {
+  /* COLOR EXPRESSION 1: PSEUDO ELEMENT */
+  color: rgb(167, 221, 14);
+  /* TEXT STYLE 2: PSEUDO ELEMENT */
+  text-decoration: overline;
+}
+/* DIV TAG NUMBER 3: ID */
+#text-left {
+  text-align: left;
+}
+#title_font {
+  font-size: 3em;
+}
+#description_font {
+  color: rgb(71, 72, 228);
+  text-decoration: underline;
+  font-size: 1em;
+}
+#description2_font {
+  color: rgb(0, 110, 255);
+  font-size: 0.9em;
+}
+#legends_font {
+  font-size: 1.3em;
+  color: rgb(71, 72, 228);
+  text-decoration: underline;
+}
+
+#player_description_font {
+  color: black;
+  font-size: 0.8em;
+}
+#player_description_font::first-line {
+}
+#drogba_font {
+  font-variant: small-caps;
+}
+#lampard_font {
+  font-family: Tangerine;
+}
+#john_terry_font {
+  font-style: italic;
+}
+#cech_font {
+  background-color: rgb(174, 227, 43);
+  color: black;
+}
+.drogba {
+}
+.lampard {
+}
+.terry {
+}
+.cech {
+}
+h1[class~="drogba"]:hover {
+  /* COLOR EXPRESSION 2: ATTRIBUTE SELECTOR */
+  background-color: blue;
+  color: white;
+}
+h1[class|="lampard"]:hover {
+  /* COLOR EXPRESSION 3: ATTRIBUTE SELECTOR */
+  color: red;
+}
+h1[class~="terry"]:hover {
+  /* COLOR EXPRESSION 4: ATTRIBUTE SELECTOR */
+  background-color: blue;
+  color: white;
+}
+h1[id*="font"]:hover {
+  font-style: italic;
+}
+
+.container {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 50px;
+  align-items: center;
+  width: 90%;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.container h1 {
+  text-transform: uppercase;
+}
+.player-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+  width: 80%;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content h3 {
+  text-align: center;
+  margin-top: 5px;
+  color: rgb(11, 76, 249);
+}
+
+/* Mobile: width < 768px */
+@media only screen and (max-width: 50em) {
+  body {
+    margin-top: 150px;
+  }
+  .player-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Table: 768px <= width < 1024px */
+@media only screen and (min-width: 50em) and (max-width: 64em) {
+  body {
+    margin-top: 150px;
+  }
+  .player-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+}
