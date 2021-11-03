@@ -2,12 +2,42 @@
 <html>
   <head>
     <title>What's Your Color?</title>
-    <script src="problem2.js" type="text/javascript"></script>
+    <script>
+      function Color() {
+        let colorOptions = [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ];
+        let mycolor = document.getElementById("mycolor");
+        mycolor.innerHTML = "asdf";
+        let colorString = "";
+        for (let i = 0; i < 6; i++) {
+          let val = Math.floor(Math.random() * 16);
+          colorString += colorOptions[val];
+        }
+        mycolor.innerHTML = "Your Color Is " + colorString + "!";
+        document.body.style.backgroundColor = "#" + colorString;
+      }
+    </script>
   </head>
   <body>
     <p>
       <button id="colorify" onclick="Color()">What's Your Color?</button>
     </p>
-    <h2 id="mycolor">ASDF</h2>
+    <h2 id="mycolor"></h2>
   </body>
 </html>

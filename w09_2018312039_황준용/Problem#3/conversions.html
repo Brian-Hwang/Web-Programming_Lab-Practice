@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Weight Conversion</title>    
+    <title>Weight Conversion</title>
+    <script src="conversions.js" type="text/javascript"></script>
   </head>
   <body>
     <fieldset>
-      Convert <input type="text"/>
+      Convert <input id="input" type="text" />
       <select id="convert">
         <option value="kgtopounds">kg to lb</option>
         <option value="poundstokg">lb to kg</option>
       </select>
-      <button>Calculate</button>
+      <button onClick="convert()">Calculate</button>
       <span id="answer"></span>
     </fieldset>
   </body>
