@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="problem2.css" />
+    <title>Meme Generator</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Meme Generator</h1>
+      <p>Image 1:</p>
+      <input type="file" id="img1" />
+      <p>- Upper content:</p>
+      <input type="text" id="text1" onkeyup="content_1()" />
+      <br />
+      <br />
+      <p>Image 2:</p>
+      <input type="file" id="img2" />
+      <p>- Lower content:</p>
+      <input type="text" id="text2" onkeyup="content_2()" />
+      <br /><br />
+      <div id="canvas">
+        <canvas id="centers" width="700" height="700"></canvas>
+        <span id="meme1"></span>
+        <span id="meme2"></span>
+      </div>
+    </div>
+    <script src="problem2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+button {
+  display: inline-block;
+  margin: 10px;
+}
+canvas {
+  border: 1px solid;
+  margin: 10px;
+}
+
+div {
+  border: 1px solid;
+  width: 600px;
+  margin: 30px;
+}
+
+h1 {
+  margin: 10px;
+}

@@ -1,0 +1,41 @@
+body {
+  background-color: pink;
+  text-align: center;
+  /* display: table-cell;
+  vertical-align: middle; */
+}
+
+p em {
+  color: red;
+  text-align: center;
+}
+
+div {
+  border: 3px solid;
+  margin: 25px;
+  height: 100vh;
+  /* display: flex; */
+  /* display: inline-block; */
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  /* margin: 0px 50px 50px 10px; */
+}
+
+#yes {
+  background-color: green;
+  margin-left: -100px;
+}
+
+#no {
+  background-color: red;
+  margin-left: 100px;
+}
+
+#yes:hover {
+  background-color: purple;
+}

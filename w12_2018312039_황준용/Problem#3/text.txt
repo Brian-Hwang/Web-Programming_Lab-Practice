@@ -1,0 +1,15 @@
+Animal:
+	Dog: Cheerful, Devoted, Easy-going, Protective, Faithful, Impatient
+	Eagle: Attractive, Self-confident, Impatient
+	Cat: Attractive, Spiritual, Sexy, Autonomous, Uncommitted
+	Dolphin: Charismatic, Zealous, Talented Narcissistic
+
+Color:
+	Red (#ff0000)
+	Blue (#0000ff)
+	Dark pink (#ff00b3)
+	Yellow (#ffff00)
+	Green (#00FF00)
+	Black (#000000)
+	White (#ffffff)
+		

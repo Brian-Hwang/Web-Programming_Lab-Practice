@@ -1,0 +1,33 @@
+p {
+  display: inline;
+}
+
+canvas {
+  position: relative;
+  width: 700px;
+  height: 700px;
+}
+
+#main {
+  border: 3px solid;
+  margin: 25px;
+  height: 100vh;
+}
+
+#meme1 {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  left: 370px;
+  top: 230px;
+  width: 200px;
+}
+
+#meme2 {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  left: 370px;
+  top: 570px;
+  width: 200px;
+}
