@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DistanceBetweenTwoPoints</title>
+  </head>
+  <body>
+    <div id="map" style="width:500px;height:500px;"></div>
+    <p>
+      <span style="font-size:1.5em"
+        >Drag the markers to select the positions</span
+      >
+    </p>
+    <div>First position (black marker):</div>
+
+    <p id="firstPosition"></p>
+
+    <div>Second position (yellow marker):</div>
+
+    <p id="secondPosition"></p>
+
+    <div>Distance between two positions:</div>
+
+    <p id="distance"></p>
+
+    <!-- Put your kakao api key in the following line -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KEY_HERE"
+    ></script>
+
+    <script>
+      // each postion is denoted by a marker
+      // initial position of first marker
+      var lat1 = 33.450701;
+      var long1 = 126.570667;
+      // initial position of second marker
+      var lat2 = 33.450701;
+      var long2 = 126.572667;
+      // create a map centerd at first position
+      var mapContainer = document.getElementById("map"),
+        mapOption = {
+          center: new kakao.maps.LatLng(lat1, long1),
+          level: 3
+        };
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+
+      var markerSize = new kakao.maps.Size(40, 50); // size of the marker (width, height)
+
+      // define the first marker
+      var firstMarkerSrc = "firstMarker.png";
+
+      var firstMarkerImage = new kakao.maps.MarkerImage(
+        firstMarkerSrc,
+        markerSize
+      );
+      // position of the first marker
+      var firstPosition = new kakao.maps.LatLng(lat1, long1);
+      // create the first marker
+      var firstMarker = new kakao.maps.Marker({
+        map: map,
+        position: firstPosition,
+        draggable: true, // make the marker draggable
+        image: firstMarkerImage
+      });
+      // similar procedures for the second marker
+      var secondMarkerSrc = "secondMarker.png";
+
+      var secondMarkerImage = new kakao.maps.MarkerImage(
+        secondMarkerSrc,
+        markerSize
+      );
+      var secondPosition = new kakao.maps.LatLng(lat2, long2);
+      var secondMarker = new kakao.maps.Marker({
+        map: map,
+        position: secondPosition,
+        draggable: true, // make the marker draggable
+        image: secondMarkerImage
+      });
+      // display positions of two markers
+      p1 = document.getElementById("firstPosition");
+      p2 = document.getElementById("secondPosition");
+      p1.innerText = firstMarker.getPosition();
+      p2.innerText = secondMarker.getPosition();
+      // display distance between two markers
+      distance = document.getElementById("distance");
+      distance.innerText =
+        haversine_distance(
+          firstMarker.getPosition(),
+          secondMarker.getPosition()
+        ) + " m";
+
+      // this function is used to calculate distance between two positions, the output is measured in meter
+      // to get postion of a marker, you can use marker.getPosition() method
+      function haversine_distance(pos1, pos2) {
+        var R = 3958.8; // Radius of the Earth in miles
+        var rlat1 = pos1.getLat() * (Math.PI / 180); // Convert degrees to radians
+        var rlat2 = pos2.getLat() * (Math.PI / 180); // Convert degrees to radians
+        var difflat = rlat2 - rlat1; // Radian difference (latitudes)
+        var difflon = (pos2.getLng() - pos1.getLng()) * (Math.PI / 180); // Radian difference (longitudes)
+        var d =
+          2 *
+          R *
+          Math.asin(
+            Math.sqrt(
+              Math.sin(difflat / 2) * Math.sin(difflat / 2) +
+                Math.cos(rlat1) *
+                  Math.cos(rlat2) *
+                  Math.sin(difflon / 2) *
+                  Math.sin(difflon / 2)
+            )
+          );
+        d = d * 1609.34;
+        return d.toFixed(4);
+      }
+    </script>
+  </body>
+</html>
