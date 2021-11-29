@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Problem 1</title>
+    <link rel="stylesheet" href="jquery-ui.min.css" />
+    <link rel="stylesheet" href="problem3.css" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div class="outline">
+      <h1>Hobby survey</h1>
+      <h2>General Information</h2>
+      <h3>Name:</h3>
+      <input type="text" id="name" value="" />
+      <h3>Date:</h3>
+      <input type="text" id="datepicker" value="" />
+      <h2>What kind of animal do you like?</h2>
+      <ol id="selectable">
+        <li
+          class="ui-widget-content"
+          id="animal"
+          title="Cheerful, Devoted, Easy-going, Protective, Faithful, Impatient"
+        >
+          Dog
+        </li>
+        <li
+          class="ui-widget-content"
+          id="animal"
+          title="Attractive, Self-confident, Impatient
+"
+        >
+          Eagle
+        </li>
+        <li
+          class="ui-widget-content"
+          id="animal"
+          title="Attractive, Spiritual, Sexy, Autonomous, Uncommitted"
+        >
+          Cat
+        </li>
+        <li
+          class="ui-widget-content"
+          id="animal"
+          title="Charismatic, Zealous, Talented Narcissistic
+"
+        >
+          Dolphin
+        </li>
+      </ol>
+      <h2>List of some colors which you may like:</h2>
+      <ul id="sortable" class="connectedSortable">
+        <li class="ui-state-default color" id="#ff0000">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s "></span>
+          Red (#ff0000)
+        </li>
+        <li class="ui-state-default color" id="#0000ff">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s "></span>Blue (#0000ff)
+        </li>
+        <li class="ui-state-default color" id="#ff00b3">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s "></span>Dark pink
+          (#ff00b3)
+        </li>
+        <li class="ui-state-default color" id="#ffff00">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s "></span>Yellow
+          (#ffff00)
+        </li>
+        <li class="ui-state-default color" id="#00FF00">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s " style="back"></span
+          >Green (#00FF00)
+        </li>
+        <li class="ui-state-default color" id="#000000">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s "></span>Black (#000000)
+        </li>
+        <li class="ui-state-default color" id="#ffffff">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s color"></span>White
+          (#ffffff)
+        </li>
+      </ul>
+      <button type="button" id="submit">Submit</button>
+      <div class="outline2">
+        <h3>You answer is:</h3>
+        <h2 id="one"></h2>
+        <h2 id="two"></h2>
+        <h2 id="three"></h2>
+
+        <h3>Drop the color(s) here (After this line):</h3>
+        <ul id="sortable2" class="connectedSortable">
+          <br />
+          <br />
+        </ul>
+      </div>
+    </div>
+    <script src="problem3.js"></script>
+  </body>
+</html>

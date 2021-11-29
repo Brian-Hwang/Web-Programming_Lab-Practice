@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var canvas = document.getElementById("centers");
   var ctx = canvas.getContext("2d");
+  var count = 0;
+  $("canv").hide();
 
   $("#button1").click(function() {
     ctx.beginPath();
