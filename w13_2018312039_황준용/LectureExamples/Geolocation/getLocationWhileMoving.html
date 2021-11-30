@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="startGeolocation()">Start geolocation</button>
+  <button onclick="stopGeolocation()">Stop geolocation</button>
+  <div id="target"></div>
+  <script>
+    var id;
+    var myDiv = document.getElementById("target");
+    function startGeolocation() {
+      if (navigator.geolocation) {
+        id = navigator.geolocation.watchPosition(showGeolocation);
+      }
+    } 	
+    function showGeolocation(location) {
+      myDiv.innerHTML = "(Latitude: " + location.coords.latitude +
+      ", Longitude: " + location.coords.longitude + ")";
+    }
+    function stopGeolocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.clearWatch(id);
+	 myDiv.innerHTML = "";
+      }
+    }
+  </script>
+</body>
+</html>

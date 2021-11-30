@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SessionStorageButtonClickCount</title>
+</head>
+<body>
+    <p>
+    <button onclick="incrementCounter()" type="button">Click!        </button>
+    </p>
+    <div id="target"></div>
+    <script>
+       function incrementCounter() {
+           //Ensure that sessionStorage is supported
+           if (('sessionStorage' in window) && window['sessionStorage'] !== null) {
+               if (sessionStorage.count) {
+                   sessionStorage.count++;
+               }
+               else {
+                   sessionStorage.count = 1;
+               }
+               document.getElementById("target").innerHTML = "clicked " + sessionStorage.count + "times.";
+           }
+           else {
+               document.getElementById("target").innerHTML = "Session Storage Unavailable";
+           }
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kakao API</title>
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3aca875e610e09dbf738e11232efc0fd"
+    ></script>
+    <p>Click the button to get the map of your position.</p>
+    <button onclick="getLocation()">Show your position</button>
+    <br />
+    <p id="demo"></p>
+    <div id="map" style="width:500px;height:300px;"></div>
+
+    <script>
+      function getLocation() {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      }
+      function showPosition(position) {
+        var x = document.getElementById("demo");
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+        var mapContainer = document.getElementById("map"),
+          mapOption = {
+            center: new kakao.maps.LatLng(
+              position.coords.latitude,
+              position.coords.longitude
+            ),
+            level: 3
+          };
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+        var marker = new kakao.maps.Marker({
+          position: map.getCenter()
+        });
+        marker.setMap(map);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Page visits count : <span id="count"></span></p>
+  <script>
+    if (!localStorage.pageLoadCount) //If pageLoadCount does not exist
+      localStorage.pageLoadCount = 0; //Initialization
+    
+    localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+    document.getElementById('count').textContent = localStorage.pageLoadCount;
+  </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Nguyen");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>
+ -->

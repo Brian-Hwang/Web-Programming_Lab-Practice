@@ -37,6 +37,8 @@
             sessionStorage.numKBs +
             " KB";
         } else {
+          if (!sessionStorage.numKBs) sessionStorage.numKBs = 0;
+          if (!sessionStorage.numFiles) sessionStorage.numFiles = 0;
           document.getElementById("session").innerHTML =
             "In this session, you have uploaded " +
             "0 files with size 0.00" +
@@ -53,14 +55,69 @@
             localStorage.numKBs +
             " KB";
         } else {
+          if (!localStorage.numKBs) localStorage.numKBs = 0;
+          if (!localStorage.numFiles) localStorage.numFiles = 0;
           document.getElementById("local").innerHTML =
             "In total, you have uploaded " + "0 files with size 0.00" + " KB";
         }
       }
+      var sizes = 0;
+      var filenum = 0;
       // complete these two functions
-      function updateFiles() {}
+      function updateFiles() {
+        sizes = 0;
+        filenum = 0;
+        file = document.getElementById("fileList");
+        console.log(file.files.length);
+        for (var i = 0; i < file.files.length; ++i) {
+          console.log(file.files.item(i).size);
+          sizes = sizes + file.files.item(i).size;
+          filenum++;
+        }
+        sizes = sizes / 1000;
+        document.getElementById("fileNum").innerHTML = filenum;
+        document.getElementById("fileSize").innerHTML = sizes + "KB";
+      }
 
-      function fileCount() {}
+      function fileCount() {
+        sessionStorage.numFiles =
+          Number(sessionStorage.numFiles) + Number(filenum);
+        sessionStorage.numKBs = Number(sessionStorage.numKBs) + Number(sizes);
+        localStorage.numFiles = Number(localStorage.numFiles) + Number(filenum);
+        localStorage.numKBs = Number(localStorage.numKBs) + Number(sizes);
+        console.log(sessionStorage.numFiles, sessionStorage.numKBs);
+        if (
+          (sessionStorage.numFiles && sessionStorage.numKBs,
+          localStorage.numFiles,
+          localStorage.numKBs)
+        ) {
+          document.getElementById("session").innerHTML =
+            "In this session, you have uploaded " +
+            sessionStorage.numFiles +
+            " files with size " +
+            sessionStorage.numKBs +
+            " KB";
+        } else {
+          document.getElementById("session").innerHTML =
+            "In this session, you have uploaded " +
+            "0 files with size 0.00" +
+            " KB";
+        }
+        if (localStorage.numFiles && localStorage.numKBs) {
+          document.getElementById("local").innerHTML =
+            "In total, you have uploaded " +
+            localStorage.numFiles +
+            " files with size " +
+            localStorage.numKBs +
+            " KB";
+        } else {
+          document.getElementById("local").innerHTML =
+            "In total, you have uploaded " + "0 files with size 0.00" + " KB";
+        }
+
+        sizes = 0;
+        filenum = 0;
+      }
     </script>
   </body>
 </html>

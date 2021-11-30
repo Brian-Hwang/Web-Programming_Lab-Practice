@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ReadTextFile </title>
+</head>
+<body>
+  <div> Click the <i>Choose File</i> button and select your file </div>
+  <br>
+  <input type = "file" onchange = "readFile()" id = "fileList">
+  <p id = "content"> </p>
+  <script>
+    function readFile() {
+      file = document.getElementById ('fileList').files[0];
+      reader = new FileReader();
+      reader.readAsText(file);
+      reader.onload = function () {
+        document.getElementById ('content').innerText
+        = "File name: " + file.name
+        + "\nLast modified time: " + file.lastModified
+        + "\nLast modified date: " + file.lastModifiedDate
+        + "\nFile size: " + file.size + " bytes"
+        + "\nFile type: " + file.type
+        + "\nContent: " + reader.result;
+      };
+      reader.onerror = function () {
+        document.getElementById ('content').innerText = reader.error;
+      };
+    }
+  </script>
+</body> 
+</html>

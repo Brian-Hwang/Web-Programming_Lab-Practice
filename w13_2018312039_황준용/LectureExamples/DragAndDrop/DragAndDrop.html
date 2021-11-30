@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- define a drop box to drop images -->
+  <style>
+    #drop_box {width: 460px;
+      height: 200px; 
+      padding: 10px;
+      border: 1px dotted red;
+    }
+  </style>
+  <!-- define event handlers -->
+  <script> 
+  
+    function AllowDrop(e) {
+      e.preventDefault(); 
+    }
+    function Drag(e) {
+      e.dataTransfer.setData("a", e.target.id);
+    } 
+    function Drop(e) {
+      e.preventDefault();
+      var src = e.dataTransfer.getData("a");
+      e.target.appendChild(document.getElementById(src));
+    }
+  </script>
+</head>
+<body>
+  <!-- create a drop box and specify event handlers -->
+  <div id="drop_box" 
+       ondrop="Drop(event)" 
+       ondragover="AllowDrop(event)">
+  </div>
+  <br>
+  <!-- make images draggable and specify event handlers -->
+  <div> 
+    <img id="img1" src="parasite.jpg" draggable="true" 
+       ondragstart="Drag(event)" width="150" height="200">
+    <img id="img2" src="avatar.jpg" draggable="true" 
+       ondragstart="Drag(event)" width="150" height="200">
+    <img id="img3" src="titanic.jpg" draggable="true" 
+       ondragstart="Drag(event)" width="150" height="200">
+  </div>
+</body>
+</html>

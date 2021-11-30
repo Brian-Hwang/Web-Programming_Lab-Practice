@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LocalStorageButtonClickCount</title>
+</head>
+<body>
+    <p>
+    <button onclick="incrementCounter()" type="button">Click!</button>
+    </p>
+    <div id="target"></div>
+    <script>
+       function incrementCounter() {
+           //Ensure that localStorage is supported
+           if (('localStorage' in window) && window['localStorage'] !== null) {
+               if (localStorage.count) {
+                   localStorage.count++;
+               }
+               else {
+                   localStorage.count = 1;
+               }
+               document.getElementById('target').innerHTML = "clicked " + localStorage.count + "times.";
+           }
+           else {
+               document.getElementById('target').innerHTML = "Local Storage Unavailable";
+           }
+        }
+     </script>
+</body>
+</html>

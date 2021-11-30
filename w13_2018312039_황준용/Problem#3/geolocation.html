@@ -25,7 +25,7 @@
     <!-- Put your kakao api key in the following line -->
     <script
       type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KEY_HERE"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3aca875e610e09dbf738e11232efc0fd"
     ></script>
 
     <script>
@@ -45,7 +45,7 @@
       var map = new kakao.maps.Map(mapContainer, mapOption);
 
       var markerSize = new kakao.maps.Size(40, 50); // size of the marker (width, height)
-
+      var dragSize = new kakao.maps.Size(20, 25);
       // define the first marker
       var firstMarkerSrc = "firstMarker.png";
 
@@ -53,6 +53,7 @@
         firstMarkerSrc,
         markerSize
       );
+      var firstDragImage = new kakao.maps.MarkerImage(firstMarkerSrc, dragSize);
       // position of the first marker
       var firstPosition = new kakao.maps.LatLng(lat1, long1);
       // create the first marker
@@ -62,12 +63,33 @@
         draggable: true, // make the marker draggable
         image: firstMarkerImage
       });
+      kakao.maps.event.addListener(firstMarker, "dragstart", function() {
+        firstMarker.setImage(firstDragImage);
+      });
+      kakao.maps.event.addListener(firstMarker, "dragend", function() {
+        firstMarker.setImage(firstMarkerImage);
+        p1 = document.getElementById("firstPosition");
+        p2 = document.getElementById("secondPosition");
+        p1.innerText = firstMarker.getPosition();
+        p2.innerText = secondMarker.getPosition();
+        // display distance between two markers
+        distance = document.getElementById("distance");
+        distance.innerText =
+          haversine_distance(
+            firstMarker.getPosition(),
+            secondMarker.getPosition()
+          ) + " m";
+      });
       // similar procedures for the second marker
       var secondMarkerSrc = "secondMarker.png";
 
       var secondMarkerImage = new kakao.maps.MarkerImage(
         secondMarkerSrc,
         markerSize
+      );
+      var secondDragImage = new kakao.maps.MarkerImage(
+        secondMarkerSrc,
+        dragSize
       );
       var secondPosition = new kakao.maps.LatLng(lat2, long2);
       var secondMarker = new kakao.maps.Marker({
@@ -76,6 +98,24 @@
         draggable: true, // make the marker draggable
         image: secondMarkerImage
       });
+      kakao.maps.event.addListener(secondMarker, "dragstart", function() {
+        secondMarker.setImage(secondDragImage);
+      });
+      kakao.maps.event.addListener(secondMarker, "dragend", function() {
+        secondMarker.setImage(secondMarkerImage); // secondMarker.setposition()
+        p1 = document.getElementById("firstPosition");
+        p2 = document.getElementById("secondPosition");
+        p1.innerText = firstMarker.getPosition();
+        p2.innerText = secondMarker.getPosition();
+        // display distance between two markers
+        distance = document.getElementById("distance");
+        distance.innerText =
+          haversine_distance(
+            firstMarker.getPosition(),
+            secondMarker.getPosition()
+          ) + " m";
+      });
+
       // display positions of two markers
       p1 = document.getElementById("firstPosition");
       p2 = document.getElementById("secondPosition");
